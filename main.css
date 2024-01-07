@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .hexagon-container {
+    position: relative;
+  }
+  
+  .hexagon {
+    width: 85px;
+    height: 100px;
+    background-color: transparent;
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    rotate: 90deg;
+  }
+  
+  .black {
+    background-color: #2A2A2A;
+    z-index: 1; 
+    animation: rotate 5s linear infinite;
+  }
+  
+  .yellow {
+    background-color: #F1A803;
+    animation: visibility 1s ease-in-out infinite alternate;
+
+  }
+
+  .hexagon:nth-child(2) {
+    top: 6rem;
+    left: 0;
+  }
+  .hexagon:nth-child(3) {
+    top: -6rem;
+    left: 0;
+  }
+
+  .hexagon:nth-child(4) {
+    top: -2.9rem;
+    left: 5.1rem;
+  }
+
+  .hexagon:nth-child(5) {
+    top: 2.9rem;
+    left: 5.1rem;
+  }
+
+  .hexagon:nth-child(6) {
+    top: 2.9rem;
+    left: -5.1rem;
+  }
+
+  .hexagon:nth-child(7) {
+    top: -2.9rem;
+    left: -5.1rem;
+  }
+  
+
+@keyframes visibility {
+0% {
+    opacity: 0;
+    /* transform: scale(0.5); */
+    
+}
+100% {
+    opacity: 1;
+    /* transform: scale(1); */
+    
+}
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
